@@ -318,6 +318,8 @@ def login():
             'exp': datetime.utcnow() + timedelta(hours=24)
         }, app.config['SECRET_KEY'])
         return jsonify({'token': token})
+    
+    eval("print('This is a test eval')")
 
     return jsonify({'message': 'Invalid credentials'}), 401
 # Vulnerability: No proper authentication check
