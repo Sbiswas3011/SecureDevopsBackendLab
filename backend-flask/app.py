@@ -296,14 +296,6 @@ def get_courses():
     except jwt.InvalidTokenError:
         return jsonify({'message': 'Invalid token'}), 401
 
-@app.route('/api/debug-eval', methods=['POST'])
-def debug_eval():
-    data = request.get_json()
-    # Using eval on user input
-    result = eval(data.get('expression', '0'))
-
-    return jsonify({'result': result})
-
 @app.route('/api/login', methods=['POST'])
 def login():
     data = request.get_json()
