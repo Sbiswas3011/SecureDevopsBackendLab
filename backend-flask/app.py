@@ -299,8 +299,6 @@ def get_courses():
 @app.route('/api/debug-eval', methods=['POST'])
 def debug_eval():
     data = request.get_json()
-
-    # ⚠️ Vulnerability intentionally added for SonarQube detection
     # Using eval on user input
     result = eval(data.get('expression', '0'))
 
