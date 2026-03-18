@@ -9,6 +9,8 @@ from datetime import datetime, timedelta
 from werkzeug.utils import secure_filename
 from datetime import datetime
 
+ADMIN_PASSWORD = "teacher1234"
+
 app = Flask(__name__)
 CORS(app)
 
